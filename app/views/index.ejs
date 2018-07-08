@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+
+<%- include(views+'/head.html') %>
+	<script type="text/javascript" src="index.js"></script>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+<%- include(views+'/pre.html') %>
+
+<div id="global_controls" class="bubble inline">
+	<%- include(views+'/global_controls.html') %>
+	<div class="space">
+		<span>Num Flowers: </span>
+		<input id="num_flowers" class="control_number" type="number" autocomplete="off" value="3">
+	</div>
+	<div class="space">
+		<span>Num Skulls: </span>
+		<input id="num_skulls" class="control_number" type="number" autocomplete="off" value="1">
+	</div>
+</div>
+
+
+<div id="game_controls_div"></div>
+<div class="bubble inline">
+	<form id="bid_form">
+		<input id="bid_input" class="control_number bid_control" type="number">
+		<input id="bid_submit" class="bid_control" type="submit" value="Bid">
+		<button id="pass" class="bid_control">Pass</button>
+	</form>
+	<button id="start_over">Start Over</button>
+</div>
+<div class="bubble">
+	<p>Hand:</p>
+	<div id="hand"></div>
+</div>
+<div id="players_state" class="flex"></div>
+
+<%- include(views+'/post.html') %>
